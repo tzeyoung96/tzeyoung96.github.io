@@ -1237,7 +1237,7 @@ body{
     .page1 {
         max-width: unset;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 0.7fr 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 0.5fr 0.7fr 1fr 1fr 1fr 1fr 0.1fr ;
         height: auto;
         width: auto;
     }
@@ -1255,9 +1255,17 @@ body{
         grid-row: 3/6;
         margin: 0;
         padding: 0;
+        margin-right: 30%;
         display: flex;
         justify-self: right;
+        padding-left: 100px;
+    }
+
+    .background1-1 img {
+        overflow: hidden;
+        display: flex;
         height: 200px;
+        width: 100px;
     }
     
     .background1-2 {
@@ -1269,10 +1277,11 @@ body{
         -10px -10px 10px rgba(255, 255, 255, 0.7), 
         inset 5px 5px 25px rgba(255,255,255,0.5),
         inset -5px -5px 25px rgba(0,0,0,0.05);
-        margin-right: 70px;
+        margin-right: 40%;
         margin-top: 30px;
-        height: 250px;
+        height: 200px;
     }
+
     
     .pg1header {
     
@@ -1328,12 +1337,14 @@ body{
     .image1-1 {
         grid-row: 4/6;
         grid-column: 1/2 ;
+        margin-right: 30%;
     }
 
     .image1-1 img {
         margin: 0;
         padding: 0;
-        height:250px;
+        height:200px;
+        overflow: hidden;
 
 
     }
@@ -1342,26 +1353,25 @@ body{
 
     .page2 {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.5fr 0.7fr 1.2fr 1fr 0.7fr 1fr 1fr 1fr ;
+        grid-template-rows: 0.5fr 0.7fr 1.2fr 1fr 0.7fr 1fr 1fr ;
         height: auto;
         width: auto;
         max-width: unset;
     }
 
     .pg2nav {
-        grid-column: 1;
+        grid-column: 1/2;
         grid-row: 1/2;
+        margin-right: 30%;
         /* background-color: lightgreen; */
     }
     
     .pg2header {
-        width: 100%;
-        grid-column: 1/2 ;
-        grid-row: 3/4;
-        z-index: 3;
-        font-size: 10px;
-        font-weight: bold;
-        padding-left: 10px;
+        grid-column:1/2 ;
+        grid-row: 3/4 ;
+        z-index: 2;
+        margin-left: 10px;
+        align-self: center;
     }
     
     .pg2header2 {
@@ -1372,10 +1382,11 @@ body{
         color: #454545;
         padding-left: 10px;
         align-self: center;
+        margin-right: 30%;
     }
     
     .pg2callbutton {
-        grid-column: 1;
+        grid-column: 1/2;
         grid-row: 5/6;
         background-color: #1a1a1a;
         color: #ffffff;
@@ -1399,7 +1410,7 @@ body{
     }
     
     .pg2bg1 {
-        width: 80%;
+
         grid-column: 1/2;
         grid-row: 2/7;
         background-color: #ffd6c5;
@@ -1407,6 +1418,9 @@ body{
         -10px -10px 10px rgba(255, 255, 255, 0.7), 
         inset -5px -5px 25px rgba(0,0,0,0.05);
         border-radius: 15px;
+        margin-right: 30%;
+        margin-top: 10%;
+        margin-bottom: 10%;
     }
     
     .pg2breaker {
@@ -1419,20 +1433,21 @@ body{
         grid-column: 1/2;
         display: flex;
         justify-content: center;
+        margin-right: 30%;
 
+        
     }
     
     .hardcoverbook {
-    width: 350px;
-    height: 200px;
-    min-height: 0;
-        
+        height: 144px;
+        width: 252px;
+        min-height: unset;
     }
 
     .page3 {
         max-width: unset;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 0.5fr 0.7fr 0.7fr 0.2fr 0.7fr 0.2fr 0.7fr 0.2fr 0.7fr 0.5fr;
+        grid-template-rows: 0.1fr 0.7fr 0.7fr 0.2fr 0.7fr 0.2fr 0.7fr 0.2fr 0.7fr 0.5fr;
         height: auto;
         width: auto;
     }
@@ -1619,7 +1634,7 @@ body{
         text-align: center;
         font-size: 20px;
         font-weight: bold;
-        transform: translateY(150%);
+        transform: translateY(200%);
     }
     
     #customer4:hover p {
@@ -1806,7 +1821,7 @@ body{
 
     #toggleIcon {
         position: fixed;
-        right: 30px;
+        right:30px;
         top: 30px;
         height: 50px;
         width: 50px;
@@ -1820,6 +1835,36 @@ body{
         z-index: 20;
     }
 
+    .sidebarbox {
+        position: fixed;
+        bottom: 30%;
+        right: 25px;
+        height: 300px;
+        width: 35px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+        z-index: 8;
+    }
+    
+    
+    .sm {
+        /* overflow: hidden; */
+        width: 50px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        background-color: #fafafa;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        box-shadow:  5px 5px 5px rgba(26,26,26,0.15), 
+                     -10px -10px 10px rgba(255, 255, 255, 0.7), 
+                     inset -2px -2px 10px rgba(0,0,0,0.05);
+        overflow: hidden;
+    }
+
     body {
         width: 100%;
         overflow-x: hidden;
@@ -1827,87 +1872,6 @@ body{
 
 
 }
-
-
-/* @media only screen and (max-width:817px){
-
-    .sidebarbox {
-        position: fixed;
-        bottom: 40%;
-        right: 25px;
-        height: 300px;
-        width: 75px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center ;
-        z-index: 8;
-    }
-
-    .sm {
-        width: 75px;
-        height: 75px;
-        box-shadow:  5px 5px 5px rgba(26,26,26,0.15), 
-        inset -2px -2px 10px rgba(0,0,0,0.05);
-    }
-
-    .sm1 img {
-        transform: translateX(100%);
-    }
-    
-    .sm2 img {
-        transform: translateX(110%);
-    }
-    
-    .sm3 img {
-        transform: translateX(60%);
-    }
-    
-    .sidebarbox a {
-        text-decoration: none;
-    }
-    
-    .sm p {
-        color: #1a1a1a;
-        transform: translateX(-150%);
-        font-weight: bold;
-    }
-    
-    .sm3 p {
-        color: #1a1a1a;
-        transform: translateX(-265%);
-        font-weight: bold;
-    }
-    
-    
-    .sm:hover {
-        overflow: visible;
-        box-shadow:  10px 10px 10px rgba(26,26,26,0.15), 
-        -10px -10px 10px rgba(255, 255, 255, 0.7), 
-        inset -2px -2px 10px rgba(0,0,0,0.05);
-    }
-}
-
-@media only screen and (max-width:500px){
-    #toggleIcon {
-        right:100px;
-        top: 75px;
-        height: 75px;
-        width: 75px;
-
-    }
-
-    #toggleIcon.active {
-        right: 100px;
-        top: 75px;
-        height: 75px;
-        width: 75px;
-    }
-    
-
-} */
-
-
-
 
 
 
